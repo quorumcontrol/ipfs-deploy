@@ -13,12 +13,7 @@ inputs: # TODO: Add support for more pinning services & DNS
     required: false
 runs:
   using: 'node12'
-  main: 'bin/ipfs-deploy.js'
-  args:
-    - -p ${{ inputs.pinning-service }}
-  env:
-    IPFS_DEPLOY_PINATA__API_KEY: ${{ inputs.pinata-api-key }}
-    IPFS_DEPLOY_PINATA__SECRET_API_KEY: ${{ inputs.pinata-secret-api-key }}
+  main: 'bin/github-action.js'
 branding:
   icon: 'box'
   color: 'blue'
